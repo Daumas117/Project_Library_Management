@@ -23,11 +23,11 @@ The objective of this project is to **practice SQL** by working with the Library
 
 - **Tool Used:** SQL Server Management Studio (SSMS)
 - **SQL Script:**
-- 	`Create_Tables.sql`
-- 	`Insert_Queries.sql`
-- 	`Insert_Queries_2.sql`
-- 	`Queries_Data_Review.sql`
-- 	`Review_Analysis.sql` 
+	- `Create_Tables.sql`
+	- `Insert_Queries.sql`
+	- `Insert_Queries_2.sql`
+	- `Queries_Data_Review.sql`
+	- `Review_Analysis.sql` 
 - **Dataset Link:** Query SQL Server.
 - **Format**: `Query`
 - **Schema**:
