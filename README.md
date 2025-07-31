@@ -338,7 +338,7 @@ select * from employees -- The employees for each branch
 select * from books -- The Books that exists
 select * from return_status -- All the returns done
 
--- We need to conect the information
+-- We need to connect the information
 
 
 SELECT 
@@ -354,7 +354,7 @@ into branch_report
 		on e.emp_id = iss.issued_emp_id
 	join branch as br
 		on e.branch_id = br.branch_id
-	left join return_status as rs -- We conect with a left join because there still books missing, we dont want to have nulls.
+	left join return_status as rs -- We connect with a left join because there are still books missing, we dont want to have nulls.
 		on rs.issued_id = iss.issued_id
 	join books as b
 		on iss.issued_book_isbn = b.isbn
@@ -365,7 +365,7 @@ order by Total_revenue desc
 ```
 ![](images/Querie10.0.png)
 
-11. Task: Create a table with CTAS. Use the CTAS to create a new table Active Members containing members who have issued at least one book in the last 16 months.
+11. Task: Create a table with CTAS. Use the CTAS to create a new table, Active Members, containing members who have issued at least one book in the last 16 months.
 ```sql
 with Active_members as(
 select 	*
@@ -378,7 +378,7 @@ select * from Active_members
 ```
 ![](images/Querie11.0.png)
 
-18. Task: Find Employees with the most books processed.Write a Query to fin the top 3 employees who have processed the most books issues. Display the information in the following format: Name. Number of books. Branch.
+12. Task: Find Employees with the most books processed. Write a Query to find the top 3 employees who have processed the most books issues. Display the information in the following format: Name. Number of books. Branch.
 ```sql
 select * from employees
 select * from issued_status
@@ -398,18 +398,16 @@ order by 3 desc -- So we can have the highest issuer employee.
 
 ## 🎯 Key Findings
 
-- 💡 **[Insight 1]**: 
-- 📈 **[Insight 2]**: 
-- 🧩 **[Insight 3]**: 
+- 💡 **[Insight 1]**: The most requested category is Classic, while Sci-Fi is the least requested.
+- 📈 **[Insight 2]**: The highest requested book is "Animal Farm". 
+- 🧩 **[Insight 3]**: There are books overdue by more than 500 days.
 ---
 
-## 🧠 Learnings & Challenges
+## 🧠 Challenges
 
-**Learned:**
-- How to handle the use CASE to classify information.
-- Improved the use of CTEs to prevent long queries.
 
 **Challenges:**
-- Using the function cast to prevent ordering information incorrectly.
+- Using Join's to create multiple searches.
+- Dealing with PK and FK.
 - Dealing with different formats to evaluate searches.
 
